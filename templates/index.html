@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}" />
+</head>
+<body>
+
+<h1>This is for Data Mining Capstone</h1>
+<h2 style="text-align: center">Title: Dish Similarity and Popularity analysis of cuisines</h2>
+<h3 class = 'desc'  >
+        In this Application we'll analysine specific cuisine by their Yelp review text. Here are the steps -<br><br>
+        1. User will select a cuisine <br>
+        2. Application will scan all Yelp reviews and extract quality phrases with <u>AutoPhrase </u> mining technique <br>
+        3. User will select a dish from quality phrases <br>
+        4. Application will display a map with related dishes <br>
+</h3>
+<p id='indexp'>Choose the cuisine to analyze</p>
+
+<div class = 'cusisine-selection'>
+<form class="upload-form" action="/reviews" method="POST"> 
+         <div align='center'>
+                        <select name="cuisine" id = 'select-cuisine' >
+                                        <option value ="Indian">Indian</option>
+                                        <option value ="Mexican">Mexican</option>
+                                        <option value ="African">African</option>
+                                        <option value ="Chinese">Chinese</option>
+                                        <option value ="Korean">Korean</option>
+                                        <option value ="Polish">Polish</option>
+                                        </select> 
+                        <button type="submit" class="btn-cuisine">Select</button>
+        </div>
+</form>
+</div>
+
+
+</body>
+</html>

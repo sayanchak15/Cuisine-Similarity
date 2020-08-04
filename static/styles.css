@@ -1,0 +1,57 @@
+
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+.desc{
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+p {
+  font-family: verdana;
+  font-size: 40px;
+  text-align: center;
+}
+
+#selection{
+  height: 200px;
+  position: relative;
+  border: 0px; 
+}
+
+#select-cuisine {
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#find-cuisine
+{
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.btn-map{
+  height: 40px;
+}
+
+.btn-cuisine{
+  /* position: absolute;
+  left: 1000px;
+  top: 250px; */
+  height: 40px;
+}
+

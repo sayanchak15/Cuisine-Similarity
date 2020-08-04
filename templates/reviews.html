@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}" />
+   </head>
+<body>
+<table>
+   <tr>
+      <td><h1>Some Sample Reviews of <br>{{cuisine}} cuisine </h1> </td>
+      <td><h1>Some Sample Phrases of <br>{{cuisine}} cuisine </h1> </td>
+   </tr>
+         <td style="width:50%; vertical-align: top;">
+               <table border = 1>
+                  {% for value in result %}
+                     <tr>
+                        <td> {{ value }} </td>
+                     </tr>
+                  {% endfor %}
+               </table>
+            <h2>Select a <u>dish</u> from the drop down to find cuisine map. You'll find ALL mined phrases</h2>
+            <form action="/cuisinemap" method="POST"> 
+                  <select id = 'find-cuisine' name="phrase">
+                     {% for p in phrases %}
+                        <option value = "{{p}}">{{ p }}</option>
+                     {% endfor %}
+                  </select> 
+                  <button type="submit" class="btn-map">Find Cuisine Map</button>
+            </form>
+            
+         </td>
+         <td style = "vertical-align: top;">
+               <div id='sampleReviews'>
+                  <table border = 1>
+                     {% for i in range(0,total_phrase,7) %}
+                        <tr>
+                           <td> {{ phrases[i] }} </td>
+                           <td> {{ phrases[i+1] }} </td>
+                           <td> {{ phrases[i+2] }} </td>
+                           <td> {{ phrases[i+3] }} </td>
+                           <td> {{ phrases[i+4] }} </td>
+                           <td> {{ phrases[i+5] }} </td>
+                           <td> {{ phrases[i+6] }} </td>
+                        </tr>
+                     {% endfor %}
+                  </table>
+               </div>
+         </td>
+      </tr>
+</table>
+
+
+</body>
+</html>
